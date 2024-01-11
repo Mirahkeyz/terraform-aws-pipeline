@@ -260,7 +260,7 @@ module "eks" {
         max_size     = "-1" # Retains current max size
         desired_size = 2
         start_time   = "2023-05-28T00:00:00Z" # Updated start time to May 28, 2023. Ensure to adjust to a time in the future
-        end_time     = "2024-03-05T00:00:00Z"
+        end_time     = "2024-11-05T00:00:00Z"
         timezone     = "Etc/GMT+0"
         recurrence   = "0 0 * * *"
     },
@@ -269,7 +269,7 @@ module "eks" {
         max_size     = "-1" # Retains current max size
         desired_size = 0
         start_time   = "2023-05-28T12:00:00Z" # Updated start time to May 128, 2023. Ensure to adjust to a time in the future
-        end_time     = "2024-03-05T12:00:00Z"
+        end_time     = "2024-11-05T12:00:00Z"
         timezone     = "Etc/GMT+0"
         recurrence   = "0 12 * * *"
     }
@@ -314,7 +314,7 @@ module "vpc" {
 
   enable_flow_log                      = true
   create_flow_log_cloudwatch_iam_role  = true
-  create_flow_log_cloudwatch_log_group = true
+  create_flow_log_cloudwatch_log_group = false
 
   public_subnet_tags = {
     "kubernetes.io/role/elb" = 1
